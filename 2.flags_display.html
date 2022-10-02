@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2.use the rest countries and display the flags in console. -->
+    <script>
+        var request=new XMLHttpRequest();
+        request.open('GET','https://restcountries.com/v3.1/all')
+        request.send();
+        request.onload=function(){
+        var data=JSON.parse(request.response);
+        var flag=data.filter((element)=>console.log(element.flags))}
+      
+    </script>
+</body>
+</html>
